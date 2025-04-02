@@ -46,7 +46,7 @@ export function Contact() {
       <form className="bg-white p-6 rounded-xl shadow max-w-xl">
         <input type="text" placeholder="Your Name" className="w-full mb-3 p-2 border rounded" />
         <input type="email" placeholder="Your Email" className="w-full mb-3 p-2 border rounded" />
-        <textarea placeholder="Your Message" className="w-full mb-3 p-2 border rounded" rows="4"></textarea>
+        <textarea placeholder="Your Message" className="w-full mb-3 p-2 border rounded" rows={4}></textarea>
         <button type="submit" className="bg-amber-600 text-white py-2 px-4 rounded hover:bg-amber-700">
           Send Message
         </button>
