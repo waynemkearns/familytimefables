@@ -1,5 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Mail, ShoppingCart, Info } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -26,41 +24,41 @@ export default function FamilyTimeFables() {
       </section>
 
       <section className="grid md:grid-cols-3 gap-6 py-10">
-        <Card className="rounded-2xl shadow-md bg-white">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold text-amber-900 mb-2">All About Us</h2>
-            <p className="text-amber-800 text-base mb-4">
-              Learn how Family Time Fables began and meet the storyteller behind the magic. A labor of love, rooted in Irish tradition.
-            </p>
-            <Link href="/about">
-              <Button variant="outline" className="w-full" icon={<Info size={16} />}>Learn More</Button>
-            </Link>
-          </CardContent>
-        </Card>
+        <div className="rounded-2xl shadow-md bg-white p-6">
+          <h2 className="text-2xl font-semibold text-amber-900 mb-2">All About Us</h2>
+          <p className="text-amber-800 text-base mb-4">
+            Learn how Family Time Fables began and meet the storyteller behind the magic. A labor of love, rooted in Irish tradition.
+          </p>
+          <Link href="/about">
+            <button className="w-full border border-amber-600 text-amber-700 px-4 py-2 rounded flex items-center justify-center gap-2">
+              <Info size={16} /> Learn More
+            </button>
+          </Link>
+        </div>
 
-        <Card className="rounded-2xl shadow-md bg-white">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold text-amber-900 mb-2">Books & Tales</h2>
-            <p className="text-amber-800 text-base mb-4">
-              Explore our growing collection of illustrated Celtic tales including Cú Chulainn, Fionn & the Dragon, and more.
-            </p>
-            <Link href="/shop">
-              <Button className="w-full" icon={<ShoppingCart size={16} />}>Shop Now</Button>
-            </Link>
-          </CardContent>
-        </Card>
+        <div className="rounded-2xl shadow-md bg-white p-6">
+          <h2 className="text-2xl font-semibold text-amber-900 mb-2">Books & Tales</h2>
+          <p className="text-amber-800 text-base mb-4">
+            Explore our growing collection of illustrated Celtic tales including Cú Chulainn, Fionn & the Dragon, and more.
+          </p>
+          <Link href="/shop">
+            <button className="w-full bg-amber-600 text-white px-4 py-2 rounded flex items-center justify-center gap-2 hover:bg-amber-700">
+              <ShoppingCart size={16} /> Shop Now
+            </button>
+          </Link>
+        </div>
 
-        <Card className="rounded-2xl shadow-md bg-white">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold text-amber-900 mb-2">Say Hello</h2>
-            <p className="text-amber-800 text-base mb-4">
-              We’d love to hear from you. Send us your thoughts, feedback, or just say hi — we’re only an email away.
-            </p>
-            <Link href="/contact">
-              <Button variant="outline" className="w-full" icon={<Mail size={16} />}>Contact Us</Button>
-            </Link>
-          </CardContent>
-        </Card>
+        <div className="rounded-2xl shadow-md bg-white p-6">
+          <h2 className="text-2xl font-semibold text-amber-900 mb-2">Say Hello</h2>
+          <p className="text-amber-800 text-base mb-4">
+            We’d love to hear from you. Send us your thoughts, feedback, or just say hi — we’re only an email away.
+          </p>
+          <Link href="/contact">
+            <button className="w-full border border-amber-600 text-amber-700 px-4 py-2 rounded flex items-center justify-center gap-2">
+              <Mail size={16} /> Contact Us
+            </button>
+          </Link>
+        </div>
       </section>
     </main>
   );
