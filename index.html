@@ -1,91 +1,13 @@
-// Modern responsive redesign of Family Time Fables homepage using React + Tailwind CSS
-// Includes hero, product highlights, and footer. CMS hooks and carousel can be added later.
-
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Mail, ShoppingCart, Facebook, Twitter } from "lucide-react";
-
-export default function HomePage() {
-  const [products] = useState([
-    { title: "Cú Chulainn", image: "/images/1.jpg" },
-    { title: "Fionn & The Dragon", image: "/images/2.jpg" },
-    { title: "Salmon of Knowledge", image: "/images/3.jpg" },
-    { title: "All Products", image: "/images/4.jpg" },
-  ]);
-
-  return (
-    <div className="min-h-screen bg-white text-gray-800">
-      {/* Header */}
-      <header className="bg-green-900 text-white p-4 flex justify-between items-center shadow">
-        <div className="text-xl font-bold tracking-wide">Family Time Fables</div>
-        <nav className="space-x-4 text-sm">
-          <a href="#home" className="hover:underline">Home</a>
-          <a href="#about" className="hover:underline">About</a>
-          <a href="#shop" className="hover:underline">Shop</a>
-          <a href="#contact" className="hover:underline">Contact</a>
-        </nav>
-      </header>
-
-      {/* Hero Section */}
-      <section className="bg-green-50 text-center py-16 px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Celtic Mythology Reimagined</h1>
-        <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto">
-          Explore family-friendly tales from Irish folklore that spark imagination and celebrate heritage.
-        </p>
-        <Button size="lg" className="bg-green-800 hover:bg-green-700 text-white">
-          Shop Now
-        </Button>
-      </section>
-
-      {/* Products */}
-      <section id="shop" className="py-16 px-6 bg-white">
-        <h2 className="text-3xl font-bold text-center mb-10">Our Stories</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {products.map((p, idx) => (
-            <Card key={idx} className="hover:shadow-xl transition">
-              <CardContent className="p-4">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="w-full h-48 object-cover rounded-xl mb-4"
-                />
-                <h3 className="text-xl font-semibold text-center">{p.title}</h3>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer id="contact" className="bg-green-900 text-white py-10 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-          <div>
-            <h4 className="text-lg font-semibold mb-2">Get in Touch</h4>
-            <p className="flex items-center space-x-2">
-              <Mail className="w-4 h-4" />
-              <a href="mailto:info@familytimefables.ie" className="underline">info@familytimefables.ie</a>
-            </p>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-2">Quick Links</h4>
-            <ul className="space-y-1 text-sm">
-              <li><a href="#home" className="hover:underline">Home</a></li>
-              <li><a href="#about" className="hover:underline">About</a></li>
-              <li><a href="#shop" className="hover:underline">Shop</a></li>
-              <li><a href="#contact" className="hover:underline">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-2">Follow Us</h4>
-            <div className="flex space-x-4">
-              <a href="https://twitter.com/ftfables" target="_blank" rel="noopener"><Twitter /></a>
-              <a href="https://www.facebook.com/pages/Family-Time-Fables/304922579708089" target="_blank" rel="noopener"><Facebook /></a>
-            </div>
-          </div>
-        </div>
-        <div className="text-center text-xs mt-8">&copy; {new Date().getFullYear()} Family Time Fables. All rights reserved.</div>
-      </footer>
-    </div>
-  );
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family Time Fables</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
