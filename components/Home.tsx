@@ -31,7 +31,7 @@ export default function FamilyTimeFables() {
           </p>
           <Link href="/about">
             <button className="w-full border border-amber-600 text-amber-700 px-4 py-2 rounded flex items-center justify-center gap-2">
-              <Info size={16} /> Learn More
+              {Info && <Info size={16} />} Learn More
             </button>
           </Link>
         </div>
@@ -43,7 +43,7 @@ export default function FamilyTimeFables() {
           </p>
           <Link href="/shop">
             <button className="w-full bg-amber-600 text-white px-4 py-2 rounded flex items-center justify-center gap-2 hover:bg-amber-700">
-              <ShoppingCart size={16} /> Shop Now
+              {ShoppingCart && <ShoppingCart size={16} />} Shop Now
             </button>
           </Link>
         </div>
@@ -55,7 +55,7 @@ export default function FamilyTimeFables() {
           </p>
           <Link href="/contact">
             <button className="w-full border border-amber-600 text-amber-700 px-4 py-2 rounded flex items-center justify-center gap-2">
-              <Mail size={16} /> Contact Us
+              {Mail && <Mail size={16} />} Contact Us
             </button>
           </Link>
         </div>
